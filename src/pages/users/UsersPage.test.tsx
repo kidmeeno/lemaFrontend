@@ -3,9 +3,17 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import axios from 'axios';
 import '@testing-library/jest-dom';
 import UsersPage from './UsersPage';
+import { MemoryRouter } from 'react-router-dom';
 
 jest.mock('axios');
 const mockedAxios = axios as jest.Mocked<typeof axios>;
+
+// ✅ Mock useNavigate
+const mockNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockNavigate,
+}));
 
 const mockUsers = {
   data: [
@@ -28,9 +36,11 @@ describe('UsersPage', () => {
 
     const queryClient = new QueryClient();
     render(
-      <QueryClientProvider client={queryClient}>
-        <UsersPage />
-      </QueryClientProvider>
+      <MemoryRouter>
+        <QueryClientProvider client={queryClient}>
+          <UsersPage />
+        </QueryClientProvider>
+      </MemoryRouter>
     );
 
     expect(document.querySelector('.loader')).toBeInTheDocument();
