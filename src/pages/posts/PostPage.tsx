@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, PlusCircle, Trash2 } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { useState } from 'react';
 import NewPostModal from '../../components/NewPostModal';
 import { useDeleteUserPost } from '../../api/useDeletePost';

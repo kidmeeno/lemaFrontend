@@ -18,7 +18,6 @@ export function useGetPosts(id: string, page?: number, limit?: number) {
         const res = await axios.get(url);
         return res?.data;
       } catch (error) {
-        // const message = returnError(error);
         toast.error('Something went wrong while fetching data. Please try again later.');
         throw error;
       }

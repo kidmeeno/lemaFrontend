@@ -48,3 +48,8 @@ export interface NewPostModalProps {
   closeModal: () => void;
   userId: string;
 }
+
+export interface LoaderProps {
+  height?: string; 
+  width?: string; 
+}

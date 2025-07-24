@@ -1,10 +1,8 @@
 import React from 'react';
 import '../assets/style/loader.css';
+import { LoaderProps } from '../types';
 
-interface LoaderProps {
-  height?: string; 
-  width?: string; 
-}
+
 
 const Loader: React.FC<LoaderProps> = ({ height = '100vh', width = '100vw' }) => {
   return (
