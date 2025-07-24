@@ -8,11 +8,10 @@ const UserPostsGrid: React.FC<UserPostsGridProps> = ({
   onOpenNewPostModal,
 }) => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>
-      {/* New Post Card */}
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>
       <div
         onClick={onOpenNewPostModal}
-        className='border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center min-h-[293px] max-w-[270px] cursor-pointer hover:bg-gray-50'
+        className='border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center min-h-[293px] w-full cursor-pointer hover:bg-gray-50'
       >
         <div className='text-center text-gray-500'>
           <PlusCircle className='mx-auto mb-1' />
@@ -20,11 +19,10 @@ const UserPostsGrid: React.FC<UserPostsGridProps> = ({
         </div>
       </div>
 
-      {/* Existing Posts */}
       {posts.map((post) => (
         <div
           key={post.id}
-          className='relative bg-white border rounded-lg p-4 shadow-sm hover:shadow-md transition duration-200 min-h-[293px] max-w-[270px]'
+          className='relative bg-white border rounded-lg p-4 shadow-sm hover:shadow-md transition duration-200 min-h-[293px] w-full'
         >
           <button
             className='absolute top-2 right-2 text-[#F9566A] hover:text-red-500'
