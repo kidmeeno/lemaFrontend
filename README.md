@@ -124,5 +124,3 @@ LinkedIn: [linkedin.com](https://www.linkedin.com/in/bosah-arthur-11316375/)
 MIT
 
 ```
-
----
