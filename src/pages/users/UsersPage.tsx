@@ -3,8 +3,10 @@ import { useGetUsers } from '../../api/useGetUsers';
 import Pagination from '../../components/Pagination';
 import Loader from '../../components/Loader';
 import UserTable from '../../components/UserTable';
+import { useNavigate } from 'react-router-dom';
 
 export default function UsersPage() {
+  const navigate = useNavigate();
   const [page, setPage] = useState(1);
   const limit = 4;
 
@@ -17,7 +19,7 @@ export default function UsersPage() {
   const totalPages = data ? Math.ceil(data.total / limit) : 1;
 
   const handleUserClick = (userId: number) => {
-    window.location.href = `/${userId}`;
+    navigate(`/${userId}`);
   };
 
   if (isLoading) return <Loader />;
