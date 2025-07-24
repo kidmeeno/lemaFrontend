@@ -14,7 +14,6 @@ export default function PostsPage() {
 
   const {
     data: user,
-    isLoading,
     error,
     refetch,
     isFetching,
@@ -29,7 +28,7 @@ export default function PostsPage() {
       .catch(() => {});
   };
 
-  if (isLoading) return <Loader />;
+  if (isFetching) return <Loader />;
   if (error || !user)
     return <div className='p-6'>Failed to load user data.</div>;
 
