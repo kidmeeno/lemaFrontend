@@ -51,7 +51,7 @@ npm test
 All data is fetched from the backend hosted at:
 
 ```bash
-[https://lema-backend.onrender.com/api](https://lemaassesmentbackend.onrender.com)
+https://lemaassesmentbackend.onrender.com
 ```
 
 Endpoints used:
