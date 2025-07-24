@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { ENDPOINTS, QUERY_KEYS } from '../lib/constants';
 import axios from 'axios';
 import { UsersResponse } from '../types';
+import { toast } from 'react-toastify';
 
 
 export function useGetUsers(page: number, limit: number) {
@@ -13,8 +14,7 @@ export function useGetUsers(page: number, limit: number) {
         const res = await axios.get(url);
         return res?.data;
       } catch (error) {
-        // const message = returnError(error);
-        throw error;
+        toast.error('Something went wrong while fetching data. Please try again later.');
       }
     },
     retry: false,

@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { ENDPOINTS, QUERY_KEYS } from '../lib/constants';
 import axios from 'axios';
 import { PostsResponse, UsersResponse } from '../types';
+import { toast } from 'react-toastify';
 
 export function useGetPosts(id: string, page?: number, limit?: number) {
   return useQuery<PostsResponse>({
@@ -18,6 +19,7 @@ export function useGetPosts(id: string, page?: number, limit?: number) {
         return res?.data;
       } catch (error) {
         // const message = returnError(error);
+        toast.error('Something went wrong while fetching data. Please try again later.');
         throw error;
       }
     },
