@@ -9,17 +9,18 @@ const UserTable: React.FC<UserTableProps> = ({
 }) => {
   return (
     <div className='border border-gray-border rounded-lg overflow-x-auto'>
-      <table className='min-w-full table-fixed'>
+      <table className='w-full  table-fixed'>
         <thead>
           <tr>
-            {['Full Name', 'Email Address', 'Address'].map((header, index) => (
-              <th
-                key={index}
-                className='font-inter text-left text-primary px-6 py-4  text-[14px] leading-[18px] font-medium tracking-normal mb-[12px]'
-              >
-                {header}
-              </th>
-            ))}
+            <th className='w-[30%] text-left overflow-hidden text-ellipsis  text-primary px-6 py-4 text-[14px] leading-[18px] font-medium tracking-normal font-inter'>
+              Full Name
+            </th>
+            <th className='w-[30%] text-left overflow-hidden text-ellipsis  text-primary px-6 py-4 text-[14px] leading-[18px] font-medium tracking-normal font-inter'>
+              Email Address
+            </th>
+            <th className='w-[392px] text-left text-primary px-6 py-4 text-[14px] leading-[18px] font-medium tracking-normal font-inter'>
+              Address
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +49,7 @@ const UserTable: React.FC<UserTableProps> = ({
                     {user.email}
                   </td>
                   <td
-                    className='text-primary px-6 py-4 w-[392px] whitespace-nowrap overflow-hidden text-ellipsis text-sm leading-5 font-normal tracking-normal'
+                    className='text-primary px-6 py-4 whitespace-nowrap overflow-hidden text-ellipsis text-sm leading-5 font-normal tracking-normal'
                     title={`${user.street}, ${user.state}, ${user.city}, ${user.zipcode}`}
                   >
                     {`${user.street}, ${user.state}, ${user.city}, ${user.zipcode}`}

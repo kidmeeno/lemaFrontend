@@ -1,5 +1,6 @@
 export const ENDPOINTS = {
-  API_BASE_DEV_URL: 'https://lemaassesmentbackend.onrender.com/api',
+  API_BASE_DEV_URL: 'http://localhost:8080/api',
+  // API_BASE_DEV_URL: 'https://lemaassesmentbackend.onrender.com/api',
   USER: {
     USERS: "/users",
   },
