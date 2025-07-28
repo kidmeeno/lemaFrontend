@@ -8,13 +8,13 @@ const UserPostsGrid: React.FC<UserPostsGridProps> = ({
   onOpenNewPostModal,
 }) => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
       <div
         onClick={onOpenNewPostModal}
         className='border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center min-h-[293px] w-full cursor-pointer hover:bg-gray-50'
       >
         <div className='text-center text-gray-500'>
-          <PlusCircle className='mx-auto mb-1' />
+          <PlusCircle className='mx-auto mb-2' />
           <p className='text-sm'>New Post</p>
         </div>
       </div>
@@ -28,7 +28,7 @@ const UserPostsGrid: React.FC<UserPostsGridProps> = ({
             className='absolute top-2 right-2 text-[#F9566A] hover:text-red-500'
             onClick={() => onDelete(post.id)}
           >
-            <Trash2 size={16} />
+            <Trash2 size={24} />
           </button>
           <h2 className='text-primary mb-4 text-[18px] leading-[20px] font-medium tracking-normal w-[95%]'>
             {post.title}
