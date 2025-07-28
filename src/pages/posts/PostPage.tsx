@@ -35,7 +35,7 @@ export default function PostsPage() {
   return (
     <div className='max-w-4xl mx-auto px-4 py-8 font-inter'>
       <Link to='/'>
-        <button className='py-4 flex gap-2 items-center disabled:opacity-50 text-[14px] leading-[20px] font-semibold tracking-normal text-[#535862]'>
+        <button className='py-4 flex gap-2 items-center disabled:opacity-50 text-[14px] leading-[20px] font-semibold tracking-normal text-primary'>
           <ArrowLeft />
           Back to Users
         </button>
@@ -43,7 +43,7 @@ export default function PostsPage() {
       <h1 className='text-2xl text-[36px] leading-[72px] font-medium tracking-normal'>
         {user.user.name}
       </h1>
-      <p className='text-sm text-[#535862] font-normal tracking-normal'>
+      <p className='text-sm text-primary font-normal tracking-normal'>
         {user.user.email} &bull;{' '}
         <span className='font-medium'>{user.posts.length} Posts</span>
       </p>

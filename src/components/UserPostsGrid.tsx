@@ -30,10 +30,10 @@ const UserPostsGrid: React.FC<UserPostsGridProps> = ({
           >
             <Trash2 size={16} />
           </button>
-          <h2 className='text-[#535862] mb-4 text-[18px] leading-[20px] font-medium tracking-normal w-[95%]'>
+          <h2 className='text-primary mb-4 text-[18px] leading-[20px] font-medium tracking-normal w-[95%]'>
             {post.title}
           </h2>
-          <p className='text-[#535862] font-inter text-[14px] leading-[20px] font-normal tracking-normal'>
+          <p className='text-primary font-inter text-[14px] leading-[20px] font-normal tracking-normal'>
             {post.body}
           </p>
         </div>

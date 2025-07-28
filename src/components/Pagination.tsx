@@ -11,13 +11,13 @@ const Pagination: React.FC<PaginationProps> = ({
   const pages = generatePageNumbers(currentPage, totalPages);
 
   return (
-    <div className='flex items-center gap-2 justify-end mt-6 flex-wrap'>
+    <div className='flex items-center justify-end mt-6 flex-wrap font-inter'>
       <button
         disabled={currentPage === 1}
         onClick={() => onPageChange(currentPage - 1)}
-        className='px-3 py-1 flex gap-2 items-center disabled:opacity-50 text-[14px] leading-[20px] font-semibold tracking-normal text-[#535862]'
+        className='px-3 py-1 flex gap-2 items-center disabled:opacity-50 text-sm leading-[20px] font-semibold tracking-normal text-primary'
       >
-        <ArrowLeft/>
+        <ArrowLeft height={20} width={20} />
         Previous
       </button>
 
@@ -26,8 +26,10 @@ const Pagination: React.FC<PaginationProps> = ({
           key={index}
           disabled={p === '...'}
           onClick={() => typeof p === 'number' && onPageChange(p)}
-          className={`px-3 py-1 border rounded ${
-            currentPage === p ? 'bg-[#F9F5FF] text-[#7F56D9]' : 'hover:bg-gray-200 text-[#535862]'
+          className={`px-3 py-1 h-10 w-10 rounded ${
+            currentPage === p
+              ? 'bg-secondary-bg text-secondary'
+              : 'hover:bg-gray-200 text-primary'
           } ${p === '...' ? 'cursor-default' : ''}`}
         >
           {p}
@@ -37,10 +39,10 @@ const Pagination: React.FC<PaginationProps> = ({
       <button
         disabled={currentPage === totalPages}
         onClick={() => onPageChange(currentPage + 1)}
-        className='px-3 py-1 flex gap-2 items-center  disabled:opacity-50 text-[14px] leading-[20px] font-semibold tracking-normal text-[#535862]'
+        className='px-3 py-1 flex gap-2 items-center  disabled:opacity-50 text-sm leading-[20px] font-semibold tracking-normal text-primary'
       >
         Next
-        <ArrowRight/>
+        <ArrowRight height={20} width={20} />
       </button>
     </div>
   );

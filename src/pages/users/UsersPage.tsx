@@ -25,8 +25,8 @@ export default function UsersPage() {
   if (isLoading) return <Loader />;
 
   return (
-    <div className='max-w-5xl mx-auto mt-10 p-4 font-inter'>
-      <h1 className='text-2xl text-[60px] leading-[72px] font-medium tracking-[-0.02em] mb-[20px]'>
+    <div className='max-w-4xl mx-auto mt-10 p-4 font-inter'>
+      <h1 className='text-2xl text-[60px] leading-[72px] font-medium tracking-[-0.02em] mb-[24px]'>
         Users
       </h1>
       {data && (
