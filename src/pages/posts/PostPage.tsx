@@ -36,7 +36,7 @@ export default function PostsPage() {
     <div className='max-w-4xl mx-auto px-4 py-8 font-inter'>
       <Link to='/'>
         <button className='py-4 flex gap-2 items-center disabled:opacity-50 text-[14px] leading-[20px] font-semibold tracking-normal text-primary'>
-          <ArrowLeft />
+          <ArrowLeft size={11.67} />
           Back to Users
         </button>
       </Link>
